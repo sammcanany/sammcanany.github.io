@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -u \"github-actions-bot <actions@github.com>\" -r https://$GITHUB_TOKEN@github.com/sammcanany/sammcanany.github.io.git"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.8",
