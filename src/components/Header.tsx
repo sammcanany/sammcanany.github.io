@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from '@tanstack/react-router'
-import { FiSun, FiMoon } from 'react-icons/fi'
+import { FiSun, FiMoon, FiChevronDown, FiChevronUp } from 'react-icons/fi'
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const root = window.document.documentElement
@@ -33,8 +34,8 @@ const Header = () => {
         >
           Sam McAnany
         </Link>
-        {/* Navigation */}
-        <nav className="flex-1 flex justify-center">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex flex-1 justify-center">
           <ul className="flex gap-4 md:gap-8">
             <li>
               <Link
@@ -94,6 +95,76 @@ const Header = () => {
         >
           {darkMode ? <FiSun /> : <FiMoon />}
         </button>
+      </div>
+      {/* Mobile Down Arrow */}
+      <div className="md:hidden flex flex-col items-center">
+        <button
+          onClick={() => setMenuOpen((open) => !open)}
+          className="text-4xl text-yellow-400 drop-shadow-lg hover:text-yellow-300 dark:text-yellow-300 dark:hover:text-yellow-200 transition mt-1"
+          aria-label="Toggle navigation"
+        >
+          {menuOpen ? <FiChevronUp /> : <FiChevronDown />}
+        </button>
+        {menuOpen && (
+          <nav className="w-full bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-black py-2">
+            <ul className="flex flex-col items-center gap-2">
+              <li>
+                <Link
+                  to="/"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/education"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Education
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/experience"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Experience
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/projects"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/skills"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Skills
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="block px-3 py-2 rounded-md text-gray-200 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
     </header>
   )
