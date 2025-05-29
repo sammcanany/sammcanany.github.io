@@ -18,8 +18,7 @@ const Home = () => (
         <span className="text-blue-600 dark:text-blue-400">Sam McAnany</span>
       </h1>
       <p className="text-lg sm:text-xl max-w-2xl text-gray-700 dark:text-gray-300 mb-2">
-        I'm a software engineer passionate about embedded systems, full-stack
-        development, and creating meaningful digital experiences.
+        I'm a software engineer with a foundation in full-stack development, web technologies, and problem-solving.
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4">
         <a
