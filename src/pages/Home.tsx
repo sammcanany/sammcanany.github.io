@@ -22,7 +22,7 @@ const Home = () => (
       </p>
       <div className="mt-10 flex flex-col sm:flex-row gap-4">
         <a
-          href="/resume.pdf"
+          href="/Sam-McAnany-Resume.pdf"
           download
           className="rounded-lg border border-transparent px-6 py-3 text-white font-medium
             bg-blue-800 hover:bg-blue-600 hover:border-blue-400 transition-all flex items-center gap-4 text-lg shadow"
