@@ -1,5 +1,12 @@
-import { FaGithub } from 'react-icons/fa'
-import { SiUnrealengine, SiCplusplus, SiDotnet } from 'react-icons/si'
+import { FaGithub, FaReact } from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiVite,
+  SiTailwindcss,
+  SiUnrealengine,
+  SiCplusplus,
+  SiDotnet
+} from 'react-icons/si'
 import { TbBrandCSharp, TbSql } from 'react-icons/tb'
 
 const Projects = () => (
@@ -8,7 +15,50 @@ const Projects = () => (
       Projects
     </h2>
     <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
-      {/* Project 1 */}
+      {/* Project 1: Portfolio App */}
+      <div className="bg-white/90 dark:bg-gray-800/95 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div className="flex items-center gap-3 mb-3">
+          <FaReact className="text-2xl text-blue-500" title="React" />
+          <SiTypescript className="text-2xl text-blue-700" title="TypeScript" />
+          <SiVite className="text-2xl text-purple-500" title="Vite" />
+          <SiTailwindcss
+            className="text-2xl text-cyan-500"
+            title="Tailwind CSS"
+          />
+          <FaGithub
+            className="text-2xl text-gray-800 dark:text-gray-200"
+            title="GitHub"
+          />
+        </div>
+        <h3 className="text-2xl font-semibold mb-2 text-blue-900 dark:text-blue-200">
+          Portfolio Website{' '}
+          <span className="text-base text-gray-500 dark:text-gray-400">
+            (2025)
+          </span>
+        </h3>
+        <p className="text-lg text-gray-700 dark:text-gray-300">
+          This portfolio site, built with React, TypeScript, Vite, TanStack
+          Router, Query, and Form, featuring a contact form and GitHub Pages
+          deployment.
+        </p>
+        <a
+          href="https://github.com/sammcanany/sammcanany.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-3 text-blue-700 dark:text-blue-400 hover:underline font-medium"
+        >
+          <FaGithub className="inline mr-2" /> View Source
+        </a>
+        <a
+          href="https://sammcanany.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-3 ml-4 text-blue-700 dark:text-blue-400 hover:underline font-medium"
+        >
+          🌐 Visit Site
+        </a>
+      </div>
+      {/* Project 2 */}
       <div className="bg-white/90 dark:bg-gray-800/95 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
         <div className="flex items-center gap-3 mb-3">
           <SiUnrealengine
@@ -28,7 +78,7 @@ const Projects = () => (
           FastNoise.
         </p>
       </div>
-      {/* Project 2 */}
+      {/* Project 3*/}
       <div className="bg-white/90 dark:bg-gray-800/95 rounded-2xl shadow-xl p-8 border border-gray-200 dark:border-gray-700 transition-colors duration-300">
         <div className="flex items-center gap-3 mb-3">
           <SiDotnet className="text-2xl text-purple-700" title="ASP.NET" />
