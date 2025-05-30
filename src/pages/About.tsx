@@ -42,13 +42,14 @@ const About = () => (
           <span className="font-semibold text-blue-700 dark:text-blue-300">TypeScript</span>, and{" "}
           <span className="font-semibold text-blue-700 dark:text-blue-300">C#</span>, and I'm always eager to learn new technologies and tackle challenging problems.
         </p>
-        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+        <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-12">
           Outside of coding, I enjoy exploring new tech, gaming, and collaborating on creative projects.
-          <span className="inline-block ml-2 px-2 py-1 bg-purple-100 dark:bg-purple-900 rounded-lg font-semibold text-purple-700 dark:text-purple-300">
-            Welcome to my portfolio!
-          </span>
         </p>
       </div>
+      {/* Centered at the bottom of the card */}
+      <span className="absolute left-1/2 bottom-6 -translate-x-1/2 inline-block px-4 py-2 bg-purple-100 dark:bg-purple-900 rounded-lg font-semibold text-purple-700 dark:text-purple-300 text-center shadow-md">
+        Welcome to my portfolio!
+      </span>
     </div>
   </section>
 )

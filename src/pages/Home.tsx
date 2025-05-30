@@ -54,9 +54,9 @@ const Home = () => (
         </a>
         <a
           href="/projects"
-          className="px-6 py-3 bg-gray-800 hover:bg-gray-700 dark:bg-gray-200 dark:text-gray-900
-            dark:hover:bg-gray-300 text-white text-lg font-medium rounded-lg shadow
-            flex items-center gap-2 transition-colors duration-300"
+          className="px-6 py-3 bg-gray-800 hover:bg-blue-700 dark:bg-blue-500 dark:text-white
+            dark:hover:bg-blue-400 text-white text-lg font-medium rounded-lg shadow
+            flex items-center justify-center gap-2 transition-colors duration-300 text-center"
         >
           View Projects
           <FaFolderOpen className="text-xl" />

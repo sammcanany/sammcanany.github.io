@@ -51,15 +51,7 @@ const Projects = () => (
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-700 text-white hover:bg-yellow-400 hover:text-blue-900 dark:hover:bg-yellow-400 dark:hover:text-blue-900 font-medium shadow transition-colors"
           >
-            <FaGithub /> View Source
-          </a>
-          <a
-            href="https://sammcanany.github.io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-100 text-blue-900 hover:bg-yellow-100 hover:text-blue-900 dark:bg-blue-900 dark:text-blue-100 dark:hover:bg-yellow-100 dark:hover:text-blue-900 font-medium shadow transition-colors"
-          >
-            🌐 Visit Site
+            <FaGithub /> View on GitHub
           </a>
         </div>
       </div>
