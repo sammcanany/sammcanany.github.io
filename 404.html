@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      // Redirect all 404s to index.html for SPA routing
-      var redirectTo = '/sammcanany.github.io/';
+      var redirectTo = '/';
       var path = window.location.pathname + window.location.search + window.location.hash;
       if (path !== redirectTo) {
         window.location.replace(redirectTo + '#' + path);
