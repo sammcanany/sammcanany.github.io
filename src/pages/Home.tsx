@@ -1,10 +1,10 @@
-import { FaFileDownload, FaFolderOpen } from 'react-icons/fa'
+import { FaFileDownload, FaFolderOpen, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 const Home = () => (
   <section
     className="flex flex-col items-center justify-center text-center min-h-screen
-    bg-gradient-to-b from-gray-100 to-white dark:from-gray-900 dark:to-black
+    bg-gradient-to-b from-gray-100 to-white dark:from-blue-900 dark:to-black
     px-4 transition-colors duration-500"
   >
     <motion.div
@@ -15,11 +15,33 @@ const Home = () => (
     >
       <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white sm:text-6xl mb-6">
         Hi, I'm{' '}
-        <span className="text-blue-600 dark:text-blue-400">Sam McAnany</span>
+        <span className="text-blue-700 dark:text-blue-500">Sam McAnany</span>
       </h1>
       <p className="text-lg sm:text-xl max-w-2xl text-gray-700 dark:text-gray-300 mb-2">
-        I'm a software engineer with a foundation in full-stack development, web technologies, and problem-solving.
+        I'm a software engineer with a foundation in full-stack development, web
+        technologies, and problem-solving.
       </p>
+      {/* Social Links */}
+      <div className="flex justify-center gap-6 mb-2 mt-4">
+        <a
+          href="https://github.com/sammcanany"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 text-2xl transition-colors"
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/samuel-mcanany/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 text-2xl transition-colors"
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
+      </div>
       <div className="mt-10 flex flex-col sm:flex-row gap-4">
         <a
           href="/Sam-McAnany-Resume.pdf"

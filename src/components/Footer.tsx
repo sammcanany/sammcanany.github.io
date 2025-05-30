@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => (
-  <footer className="fixed bottom-0 left-0 w-full z-50 bg-gradient-to-t from-gray-900 via-gray-800 to-gray-700 dark:from-black dark:via-gray-900 dark:to-gray-800 text-gray-200 p-4 text-center flex flex-col items-center gap-2 shadow-t">
+  <footer className="bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 dark:from-gray-900 dark:via-gray-900 dark:to-black text-blue-200 dark:text-blue-200 p-4 text-center flex flex-col items-center gap-2 shadow-t">
     <div className="flex justify-center gap-8 mb-1">
       <a
         href="https://github.com/sammcanany"

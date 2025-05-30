@@ -14,6 +14,7 @@ import Experience from './pages/Experience'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Contact from './pages/Contact'
+import About from './pages/About'
 
 const rootRoute = createRootRoute({
   component: () => (
@@ -57,6 +58,11 @@ const contactRoute = createRoute({
   path: '/contact',
   component: Contact
 })
+const aboutRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/about',
+  component: About
+})
 
 // NotFound route: redirects to home for any unknown path
 const notFoundRoute = createRoute({
@@ -76,6 +82,7 @@ const router = createRouter({
     projectsRoute,
     skillsRoute,
     contactRoute,
+    aboutRoute,
     notFoundRoute
   ]),
   history: createHashHistory()

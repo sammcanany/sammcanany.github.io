@@ -25,7 +25,7 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-md transition-colors duration-300">
+    <header className="bg-gradient-to-r from-blue-900 via-blue-800 to-gray-900 dark:from-gray-900 dark:via-gray-900 dark:to-black shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between relative">
         {/* Logo/Icon */}
         <Link to="/" className="flex items-center">
@@ -86,6 +86,14 @@ const Header = () => {
                 className="px-3 py-1 rounded-md text-blue-400 hover:bg-blue-700 hover:text-white transition"
               >
                 Skills
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="px-3 py-1 rounded-md text-blue-400 hover:bg-blue-700 hover:text-white transition"
+              >
+                About
               </Link>
             </li>
             <li>
@@ -155,6 +163,15 @@ const Header = () => {
                   onClick={() => setMenuOpen(false)}
                 >
                   Skills
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/about"
+                  className="block px-3 py-2 rounded-md text-blue-400 hover:bg-blue-700 hover:text-white transition"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  About
                 </Link>
               </li>
               <li>

@@ -32,7 +32,7 @@ const Contact = () => {
   })
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-100 dark:from-black dark:to-gray-900 px-4 py-12">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-white to-gray-100 dark:from-blue-900 dark:to-black px-4 py-12">
       <h2 className="text-4xl font-bold mb-8 text-blue-800 dark:text-blue-400">
         Contact
       </h2>
@@ -43,7 +43,8 @@ const Contact = () => {
         <form.Field
           name="name"
           validators={{
-            onChange: (value) => (!value.value.trim() ? 'Name is required' : undefined)
+            onChange: (value) =>
+              !value.value.trim() ? 'Name is required' : undefined
           }}
         >
           {(field) => (
@@ -94,7 +95,8 @@ const Contact = () => {
         <form.Field
           name="message"
           validators={{
-            onChange: (value) => (!value.value.trim() ? 'Message is required' : undefined)
+            onChange: (value) =>
+              !value.value.trim() ? 'Message is required' : undefined
           }}
         >
           {(field) => (
@@ -119,10 +121,14 @@ const Contact = () => {
           className="mt-2 bg-blue-800 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors shadow"
           disabled={form.state.isSubmitting || mutation.isPending}
         >
-          {form.state.isSubmitting || mutation.isPending ? 'Sending...' : 'Send Email'}
+          {form.state.isSubmitting || mutation.isPending
+            ? 'Sending...'
+            : 'Send Email'}
         </button>
         {mutation.isError && (
-          <div className="text-red-500 mt-2">Something went wrong. Please try again.</div>
+          <div className="text-red-500 mt-2">
+            Something went wrong. Please try again.
+          </div>
         )}
         {mutation.isSuccess && (
           <div className="text-green-600 mt-2">Message sent!</div>
