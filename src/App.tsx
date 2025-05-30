@@ -20,7 +20,6 @@ const rootRoute = createRootRoute({
     <div className="flex flex-col min-h-screen bg-background -to-b from-gray-100 to-white dark:from-gray-900 dark:to-black transition-colors duration-500">
       <Header />
       <main className="flex-grow p-4">
-        {' '}
         <Outlet />
       </main>
       <Footer />
@@ -59,6 +58,16 @@ const contactRoute = createRoute({
   component: Contact
 })
 
+// NotFound route: redirects to home for any unknown path
+const notFoundRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '*',
+  component: () => {
+    window.location.hash = '#/'
+    return null
+  }
+})
+
 const router = createRouter({
   routeTree: rootRoute.addChildren([
     homeRoute,
@@ -66,7 +75,8 @@ const router = createRouter({
     experienceRoute,
     projectsRoute,
     skillsRoute,
-    contactRoute
+    contactRoute,
+    notFoundRoute
   ]),
   history: createHashHistory()
 })
