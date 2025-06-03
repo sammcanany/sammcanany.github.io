@@ -54,6 +54,7 @@ const Contact = () => {
                 type="text"
                 value={field.state.value}
                 onChange={(e) => field.handleChange(e.target.value)}
+                autoComplete="name" // Added for autocomplete
                 className="mt-1 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 outline-none transition"
               />
               {field.state.meta.errors?.[0] && (
@@ -82,6 +83,7 @@ const Contact = () => {
                 type="email"
                 value={field.state.value}
                 onChange={(e) => field.handleChange(e.target.value)}
+                autoComplete="email" // Added for autocomplete
                 className="mt-1 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 outline-none transition"
               />
               {field.state.meta.errors?.[0] && (
@@ -106,6 +108,7 @@ const Contact = () => {
                 value={field.state.value}
                 onChange={(e) => field.handleChange(e.target.value)}
                 rows={5}
+                autoComplete="off" // Usually off for message fields
                 className="mt-1 w-full px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-400 dark:focus:ring-blue-600 outline-none transition"
               />
               {field.state.meta.errors?.[0] && (
