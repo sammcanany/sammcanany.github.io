@@ -1,6 +1,7 @@
 import { useForm } from '@tanstack/react-form'
 import { useMutation } from '@tanstack/react-query'
 
+//Send contact form data to the backend API
 const sendContact = async (data: { name: string; email: string; message: string }) => {
   const res = await fetch('https://portfoliobackend-fwm7.onrender.com/api/contact', {
     method: 'POST',
